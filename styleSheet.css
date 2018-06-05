@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* CSS Document */ 
+
+:root{
+	--primary-color: black;
+}
+
+html {
+	background: var(--primary-color);
+	color: #FFFFFF;		
+}
+
+header {
+	margin: 0px;
+	padding: 10px 15px;
+	align-content: center;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	margin: 0px;
+}
+
+p {
+	text-indent: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/* Menu Bar */
+
+ul.menuBar {
+	height: 40px;
+	width: 100%;
+			
+	margin: 0px;
+	
+	background-color: rgba(255,255,255,0.20);
+	
+	display: flex;
+	justify-content: center;
+}
+
+li.menuButton {	
+	width: 100px;
+	height: 100%;
+	
+	display: block;
+	position: relative;
+	
+	line-height: 40px;
+		
+	text-align: center;
+	text-decoration: none;		
+	color:#FFFFFF;	
+	font-size: 16px;
+	
+	right: 175px;
+}
+
+.menuButton a{
+	text-decoration: none;
+	color: white;
+}
+
+li.menuButton:hover .dropdown{
+	display: block;
+}
+
+li.menuButton:hover {
+	background: rgba(255,255,255,0.25)
+}
+
+.dropdown{
+	display: none;
+	position: absolute;
+	
+	min-width: 100px;
+	z-index: 1;
+	left: 0;
+		
+	background-color: rgb(50,75,75);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown a {
+	display: block;
+	padding: 0px 0px;
+	
+	text-decoration: none;
+	color: white;
+	border-bottom-style: ridge;
+	border-bottom-color: rgba(256,256,256, .1);
+}
+
+.dropdown a:hover{
+	background: rgba(255,255,255,0.25)
+}
+
+/* Content */
+
+div.content{
+	overflow: hidden;
+	width: 650px;
+	
+	align: center;
+	
+	background:rgba(255,255,255,0.20);
+	border-radius: 10px;
+	
+	margin: auto;
+	margin-top: 50px;
+	
+	padding-top: 2%;
+	padding-bottom: 1%;
+	padding-right: 5%;
+	padding-left: 5%;	
+}
+
+div.imageContent{
+	float: left;
+	
+	width: 25%;
+	height: 100%;
+	
+	margin-top: 20px;
+	
+	justify-content: center;
+}
+
+div.textContent{
+	overflow: hidden;
+	padding-left: 5%;
+}
+
+/* Social Media Bar */
+
+.socialMediaBar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	position: relative;
+	
+	display:flex;
+	justify-content: center;
+	
+	margin-top: 15px;
+}
+
+.socialMediaBar li{
+	max-width: 40px;
+	overflow: visible;
+	display: block;
+}
+
+img.socialMediaIcon{
+	width: 30px;
+	margin-right: 10px;
+}
+
+.descriptionBox{
+	visibility: hidden;
+	position: relative;
+	right: 60%;
+	
+	min-width: 65px;
+	
+	padding: 5px 10px;
+	margin-top: 5px;
+	
+	z-index: 1;
+	
+	text-align: center;
+	user-select: none;
+		
+	border-radius: 5px;
+	background-color: rgb(50,75,75);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.socialMediaBar .descriptionBox::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 47%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(50,75,75) transparent;
+}
+
+.socialMediaBar li:hover .descriptionBox{
+	visibility: visible;
+}
+
+/* Images */
+
+img.rounded {
+	border-radius: 50px;
+}
+
